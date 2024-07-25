@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class basicnode {
     
     class node{               // to create  node of linked list for editing
@@ -108,24 +110,30 @@ public class basicnode {
        System.out.println("ohh...... you deleted last node");
        return head;
     }
+    
     public static void main(String[] args) {
+        
+        Scanner sc= new Scanner(System.in);
         basicnode obj =new basicnode();
 
-         obj.addfirst(10);
-        // System.out.println("information of first node:"+obj.head.info);
-         obj.addfirst(11);
-        // System.out.println("information of secoond node:"+obj.head.info);
-        obj.addlast(9);
-      
-        obj.addmid(50,10);  //add a node before x value
+        System.out.println("how many node you want to create:");
+        int n=sc.nextInt();
+       
+        for(int i=0;i<n; i++)
+        {
+            System.out.println("enter elemets "+(i+1));
+            int s=sc.nextInt();
+            obj.addfirst(s);
+        }
+       // obj.addmid(50,10);  //add a node before x value
         obj.display();
-        obj.deletefirst();
-        obj.display();
-        obj.deletelast();
-        obj.display();
-        obj.deletefirst();
-        obj.display();
-        obj.deletelast();
-        obj.display();
+        // obj.deletefirst();
+        // obj.display();
+        // obj.deletelast();
+        // obj.display();
+        // obj.deletefirst();
+        // obj.display();
+        // obj.deletelast();
+        // obj.display();
     }
 }
